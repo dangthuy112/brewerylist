@@ -101,7 +101,10 @@ To install the latest latest npm version:
 3. XAMPP needs to be installed in order to locally utilize the Apache server and MySQL database. XAMPP can also install PHP if it's not already installed.
 <br/>
 <a href="https://www.apachefriends.org/">XAMPP Download Link</a>
-<br/> 
+<br/>
+4. Composer
+<br/>
+<a href="https://getcomposer.org/download/">Composer Download Link</a>
 
 
 ### Installation
@@ -126,23 +129,27 @@ To install the latest latest npm version:
 
 3. Create a new database name "laravelbreweries" with utf8mb4_general_ci
 <br/><img src="images/newdatabase.png" alt="Logo" width="400">
-
 <!-- 4. Go to .env file. Set DB_DATABASE to laravelbreweries
    ```sh
     DB_DATABASE=laravelbreweries -->
-4. Go to terminal. Navigate to directory of brewerylist and migrate tables
+4. In terminal, use composer to install php project files:
+   ```sh
+    composer update
+   ```
+5. In terminal, navigate to directory of brewerylist and migrate tables:
    ```sh
     php artisan migrate:fresh
    ```
-5. Go to terminal. Start the vite development mode
+6. In terminal, start the vite development mode:
    ```sh
     npm run dev
    ```
-6. Open ANOTHER terminal. Start the php server
+7. Open a NEW terminal and start the php server and:
    ```sh
     php artisan serve
    ```
-7. Navigate to http://127.0.0.1:8000/ in browser for the website
+   Note*: both vite development mode and php server has to be running at the same time
+8. Navigate to http://127.0.0.1:8000/ in browser for the website
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,7 +166,6 @@ The database will be empty to start. Press the "Grab/Reset Data" button to fetch
 On top of initially fetching data. This feature also resets the database by wiping all data and fetching from API again.
 <br/>
 This allows for more testing with the database by resetting it to a default state. But be careful not to wipe any valuable data.
-
 
 
 2. ### Viewing All Brewery Details
