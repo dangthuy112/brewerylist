@@ -102,7 +102,6 @@ To install the latest latest npm version:
 <a href="https://www.apachefriends.org/">XAMPP Download Link</a>
 
 4. Composer
-<br/>
 <a href="https://getcomposer.org/download/">Composer Download Link</a>
 
 
