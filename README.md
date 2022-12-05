@@ -89,7 +89,6 @@ This application is NOT hosted or deployed yet! Please follow the instructions b
 ### Prerequisites
 
 1. You will need NodeJS and npm installed.
-<br/>
 <a href="https://nodejs.org/en/download/">NodeJS Download Link</a>
 <br/> 
 To install the latest latest npm version:
@@ -97,8 +96,8 @@ To install the latest latest npm version:
   ```sh
   npm install npm@latest -g
   ```
-2. PHP (this can be installed along with XAMPP)
-3. XAMPP needs to be installed in order to locally utilize the Apache server and MySQL database. XAMPP can also install PHP if it's not already installed.
+1. PHP (this can be installed along with XAMPP)
+2. XAMPP needs to be installed in order to locally utilize the Apache server and MySQL database. XAMPP can also install PHP if it's not already installed.
 <br/>
 <a href="https://www.apachefriends.org/">XAMPP Download Link</a>
 <br/> 
@@ -114,10 +113,7 @@ To install the latest latest npm version:
    ```sh
    npm install
    ```
-3. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+
 
 ### Initial Setup
 
@@ -125,30 +121,30 @@ To install the latest latest npm version:
     <br/>
 <img src="images/xampp.png" alt="Logo" width="400">
 
-1. Click on admin to navigate to localhost/phpmyadmin
+2. Click on admin to navigate to localhost/phpmyadmin
      <br/>
 <img src="images/xamppadmin.png" alt="Logo" width="400">
 
-1. Create a new database name "laravelbreweries" with utf8mb4_general_ci
+3. Create a new database name "laravelbreweries" with utf8mb4_general_ci
    <br/>
    <img src="images/newdatabase.png" alt="Logo" width="400">
 
-2. Go to .env file. Set DB_DATABASE to laravelbreweries
+4. Go to .env file. Set DB_DATABASE to laravelbreweries
    ```sh
     DB_DATABASE=laravelbreweries
-3. Go to terminal. Navigate to directory of brewerylist and migrate tables
+5. Go to terminal. Navigate to directory of brewerylist and migrate tables
    ```sh
     php artisan migrate:fresh
    ```
-4. Go to terminal. Start the vite development mode
+6. Go to terminal. Start the vite development mode
    ```sh
     npm run dev
    ```
-5. Open ANOTHER terminal. Start the php server
+7. Open ANOTHER terminal. Start the php server
    ```sh
     php artisan serve
    ```
-6. Navigate to http://127.0.0.1:8000/ in browser for the website
+8. Navigate to http://127.0.0.1:8000/ in browser for the website
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
