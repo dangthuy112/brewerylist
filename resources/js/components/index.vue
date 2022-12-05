@@ -3,7 +3,7 @@
         <!-- navigation bar -->
         <nav class="navbar navbar-expand-lg border-bottom navbar-light bg-light p-3 ms-auto">
             <div class="container-fluid">
-                <span class="navbar-brand ps-5 fw-bold">BrewList</span>
+                <span class="navbar-brand ps-5 fw-bold">BreweryList</span>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,6 @@
             Made by
             <a class="text-reset fw-bold" href="http://github.com/dangthuy112">Dang Thuy Vo</a>
         </div>
-
     </div>
 </template>
 
@@ -43,9 +42,6 @@ export default {
     components() {
         AddBrewery
     },
-    mounted() {
-        console.log("index Component mounted.");
-    }
 };
 </script>
 
