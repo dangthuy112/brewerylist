@@ -118,16 +118,13 @@ To install the latest latest npm version:
 ### Initial Setup
 
 1. Start XAMPP and click Start on MySQL and Apache(MySQL has to be using port 3306)
-    <br/>
-<img src="images/xampp.png" alt="Logo" width="400">
+<br/><img src="images/xampp.png" alt="Logo" width="400">
 
 2. Click on admin to navigate to localhost/phpmyadmin
-     <br/>
-<img src="images/xamppadmin.png" alt="Logo" width="400">
+<br/><img src="images/xamppadmin.png" alt="Logo" width="400">
 
 3. Create a new database name "laravelbreweries" with utf8mb4_general_ci
-   <br/>
-   <img src="images/newdatabase.png" alt="Logo" width="400">
+<br/><img src="images/newdatabase.png" alt="Logo" width="400">
 
 4. Go to .env file. Set DB_DATABASE to laravelbreweries
    ```sh
