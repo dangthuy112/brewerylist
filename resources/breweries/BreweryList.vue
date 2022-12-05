@@ -44,9 +44,12 @@ export default {
                 if (brew.brewery_id && brew.brewery_id.toLowerCase().includes(this.searchString.toLowerCase())) return true;
                 if (brew.brewery_type && brew.brewery_type.toLowerCase().includes(this.searchString.toLowerCase())) return true;
                 if (brew.name && brew.name.toLowerCase().includes(this.searchString.toLowerCase())) return true;
+                if (brew.street && brew.street.toLowerCase().includes(this.searchString.toLowerCase())) return true;
                 if (brew.city && brew.city.toLowerCase().includes(this.searchString.toLowerCase())) return true;
                 if (brew.state && brew.state.toLowerCase().includes(this.searchString.toLowerCase())) return true;
                 if (brew.postal_code && brew.postal_code.toLowerCase().includes(this.searchString.toLowerCase())) return true;
+                if (brew.phone && brew.phone.toLowerCase().includes(this.searchString.toLowerCase())) return true;
+                if (brew.website_url && brew.website_url.toLowerCase().includes(this.searchString.toLowerCase())) return true;
             })
         }
     },
