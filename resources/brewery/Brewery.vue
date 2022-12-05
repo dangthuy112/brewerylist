@@ -1,12 +1,13 @@
 <template>
     <div class="row">
         <div class="card">
-            <div class="card-body">
+            <div v-if="loading"></div>
+            <div v-else class="card-body">
                 <div class="d-flex justify-content-between mt-2">
                     <router-link class="btn btn-primary" :to="{ name: 'breweryList' }"> &#171; Previous</router-link>
 
                     <div class="btn-group" role="group">
-                         <router-link class="edit-button btn btn-primary"
+                        <router-link class="edit-button btn btn-primary"
                             :to="{ name: 'edit_brewery', params: { id: brewery.id } }">EDIT</router-link>
                         <button class="btn btn-danger">DELETE</button>
                     </div>

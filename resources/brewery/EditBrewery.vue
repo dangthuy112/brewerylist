@@ -176,7 +176,7 @@ export default {
     },
     methods: {
         async getBrewery() {
-            const request = await axios.get(`/api/breweries/${this.$route.params.id}`)
+            await axios.get(`/api/breweries/${this.$route.params.id}`)
                 .then(response => {
                     this.brewery = response.data.data;
                 });
@@ -205,7 +205,7 @@ export default {
                 formData.append('phone', this.brewery.phone);
                 formData.append('website_url', this.brewery.website_url);
 
-                const url = '/api/add_brewery'
+                const url = `/api/edit_brewery/${this.$route.params.id}`
                 await axios.post(url, formData)
                     .then((response) => {
                         console.log(response);
