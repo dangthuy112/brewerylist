@@ -14,7 +14,7 @@
                         <!-- <BreweryItem :id="brewery.id" :brewery_id="brewery.brewery_id"
                             :brewery_type="brewery.brewery_type" :name="brewery.name" :city="brewery.city"
                             :state="brewery.state" /> -->
-                        <BreweryItem :="brewery" @delete="deleteBrewery" />
+                        <BreweryItem :="brewery" />
                     </div>
                 </div>
             </div>
@@ -36,23 +36,6 @@ export default {
         }
     },
     methods: {
-        async deleteBrewery(id) {
-            const request = await axios.delete(`/api/delete_brewery/${id}`)
-                .then(response => {
-                    this.getBreweries();
-                })
-                .catch((error) => {
-                    if (error.response) {
-                        console.log(error.response.data);
-                        console.log(error.response.status);
-                        console.log(error.response.headers);
-                    } else if (error.request) {
-                        console.log('Request made but no response\n' + error.request);
-                    } else {
-                        console.log('Error', error.message);
-                    }
-                });
-        },
         async getBreweries() {
             const request = await axios.get('/api/breweries')
                 .then(response => {
@@ -72,32 +55,33 @@ export default {
                 });
         },
         async resetData() {
-            console.log('resetting data');
+            if (confirm('This will wipe all current changes and reset with data from the API.\nAre you sure you want to reset data?')) {
+                console.log('resetting data');
 
-            const request = await axios.get('https://api.openbrewerydb.org/breweries')
-                .then(response => {
-                    const request1 = axios.post('/api/reset_data', response.data)
-                        .then(() => {
-                            this.getBreweries();
-                            console.log('data resetted');
-                        }).catch((error) => {
-                            if (error.response) {
-                                console.log(error.response.data);
-                                console.log(error.response.status);
-                                console.log(error.response.headers);
-                            } else if (error.request) {
-                                console.log('Request made but no response\n' + error.request);
-                            } else {
-                                console.log('Error', error.message);
-                            }
-                        });
-                });
+                const request = await axios.get('https://api.openbrewerydb.org/breweries')
+                    .then(response => {
+                        const request1 = axios.post('/api/reset_data', response.data)
+                            .then(() => {
+                                this.getBreweries();
+                                console.log('data resetted');
+                            }).catch((error) => {
+                                if (error.response) {
+                                    console.log(error.response.data);
+                                    console.log(error.response.status);
+                                    console.log(error.response.headers);
+                                } else if (error.request) {
+                                    console.log('Request made but no response\n' + error.request);
+                                } else {
+                                    console.log('Error', error.message);
+                                }
+                            });
+                    });
+            }
         },
     },
 
     created() {
         this.loading = true;
-        console.log("brewList Component created.");
         this.getBreweries();
     }
 };

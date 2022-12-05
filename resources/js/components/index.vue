@@ -3,7 +3,7 @@
         <!-- navigation bar -->
         <nav class="navbar navbar-expand-lg border-bottom navbar-light bg-light p-3 ms-auto">
             <div class="container-fluid">
-                <span class="navbar-brand ps-5">BrewList</span>
+                <span class="navbar-brand ps-5 fw-bold">BrewList</span>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">

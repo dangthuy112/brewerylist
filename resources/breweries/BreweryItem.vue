@@ -25,7 +25,9 @@
                     <div class="col-sm-2 btn-group-vertical" role="group">
                         <router-link class="edit-button btn btn-primary"
                             :to="{ name: 'edit_brewery', params: { id } }">EDIT</router-link>
-                        <button type="button" class="btn btn-danger" @click="$emit('delete', id)">DELETE</button>
+                        <router-link class="edit-button btn btn-danger"
+                            :to="{ name: 'delete_confirm', params: { id } }">DELETE</router-link>
+                        <!-- <button type="button" class="btn btn-danger" @click="$emit('delete', id)">DELETE</button> -->
                     </div>
                 </div>
             </div>

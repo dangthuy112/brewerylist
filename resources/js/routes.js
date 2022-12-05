@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import notFound from './components/notFound.vue';
 import BreweryList from '../breweries/BreweryList.vue';
-import Brewery from '../brewery/Brewery.vue'
-import AddBrewery from '../brewery/AddBrewery.vue'
-import EditBrewery from '../brewery/EditBrewery.vue'
+import Brewery from '../brewery/Brewery.vue';
+import AddBrewery from '../brewery/AddBrewery.vue';
+import EditBrewery from '../brewery/EditBrewery.vue';
+import ConfirmDelete from '../brewery/ConfirmDelete.vue';
 
 const routes = [
     {
@@ -15,6 +16,11 @@ const routes = [
         name: 'brewery',
         path: '/brewery/:id?',
         component: Brewery
+    },
+    {
+        name: 'delete_confirm',
+        path: '/brewery/:id?/delete_confirm',
+        component: ConfirmDelete
     },
     {
         name: 'add_brewery',
