@@ -29,7 +29,6 @@
                             :to="{ name: 'edit_brewery', params: { id } }">EDIT</router-link>
                         <router-link class="edit-button btn btn-danger"
                             :to="{ name: 'delete_confirm', params: { id } }">DELETE</router-link>
-                        <!-- <button type="button" class="btn btn-danger" @click="$emit('delete', id)">DELETE</button> -->
                     </div>
                 </div>
             </div>

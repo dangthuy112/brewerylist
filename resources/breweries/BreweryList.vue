@@ -81,14 +81,11 @@ export default {
         },
         async resetData() {
             if (confirm('This will wipe all current changes and reset with data from the API.\nAre you sure you want to reset data?')) {
-                console.log('resetting data');
-
-                const request = await axios.get('https://api.openbrewerydb.org/breweries')
+                await axios.get('https://api.openbrewerydb.org/breweries')
                     .then(response => {
                         const request1 = axios.post('/api/reset_data', response.data)
                             .then(() => {
                                 this.getBreweries();
-                                console.log('data resetted');
                             }).catch((error) => {
                                 if (error.response) {
                                     console.log(error.response.data);

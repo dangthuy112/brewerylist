@@ -209,7 +209,6 @@ export default {
                 const url = '/api/add_brewery'
                 await axios.post(url, formData)
                     .then((response) => {
-                        console.log(response);
                         if (response.status = 200) {
                             this.success = true;
                         }

@@ -96,9 +96,9 @@ To install the latest latest npm version:
   ```sh
   npm install npm@latest -g
   ```
-  
-1. PHP (this can be installed along with XAMPP)
-2. XAMPP needs to be installed in order to locally utilize the Apache server and MySQL database. XAMPP can also install PHP if it's not already installed.
+
+2. PHP (this can be installed along with XAMPP)
+3. XAMPP needs to be installed in order to locally utilize the Apache server and MySQL database. XAMPP can also install PHP if it's not already installed.
 <br/>
 <a href="https://www.apachefriends.org/">XAMPP Download Link</a>
 <br/> 
