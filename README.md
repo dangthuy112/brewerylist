@@ -99,9 +99,8 @@ To install the latest latest npm version:
 
 2. PHP (this can be installed along with XAMPP)
 3. XAMPP needs to be installed in order to locally utilize the Apache server and MySQL database. XAMPP can also install PHP if it's not already installed.
-<br/>
 <a href="https://www.apachefriends.org/">XAMPP Download Link</a>
-<br/>
+
 4. Composer
 <br/>
 <a href="https://getcomposer.org/download/">Composer Download Link</a>
@@ -133,9 +132,7 @@ To install the latest latest npm version:
 
 3. Create a new database name "laravelbreweries" with utf8mb4_general_ci
 <br/><img src="images/newdatabase.png" alt="Logo" width="400">
-<!-- 4. Go to .env file. Set DB_DATABASE to laravelbreweries
-   ```sh
-    DB_DATABASE=laravelbreweries -->
+
 4. In terminal, navigate to directory of brewerylist and migrate tables:
    ```sh
     php artisan migrate:fresh
