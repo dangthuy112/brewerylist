@@ -127,22 +127,22 @@ To install the latest latest npm version:
 3. Create a new database name "laravelbreweries" with utf8mb4_general_ci
 <br/><img src="images/newdatabase.png" alt="Logo" width="400">
 
-4. Go to .env file. Set DB_DATABASE to laravelbreweries
+<!-- 4. Go to .env file. Set DB_DATABASE to laravelbreweries
    ```sh
-    DB_DATABASE=laravelbreweries
-5. Go to terminal. Navigate to directory of brewerylist and migrate tables
+    DB_DATABASE=laravelbreweries -->
+4. Go to terminal. Navigate to directory of brewerylist and migrate tables
    ```sh
     php artisan migrate:fresh
    ```
-6. Go to terminal. Start the vite development mode
+5. Go to terminal. Start the vite development mode
    ```sh
     npm run dev
    ```
-7. Open ANOTHER terminal. Start the php server
+6. Open ANOTHER terminal. Start the php server
    ```sh
     php artisan serve
    ```
-8. Navigate to http://127.0.0.1:8000/ in browser for the website
+7. Navigate to http://127.0.0.1:8000/ in browser for the website
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
