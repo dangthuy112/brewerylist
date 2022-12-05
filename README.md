@@ -61,7 +61,7 @@
 
 
 <div style="display: flex; align-items: center"> 
-<img src="images/overview.png" alt="Logo" width="500">
+<img src="images/overview.png" alt="Logo" width="600">
 </div>
 <br/>
 Full-stack CRUD application for keeping track of breweries. 
@@ -92,7 +92,6 @@ This application is NOT hosted or deployed yet! Please follow the instructions b
 <a href="https://nodejs.org/en/download/">NodeJS Download Link</a>
 <br/> 
 To install the latest latest npm version:
-* npm
   ```sh
   npm install npm@latest -g
   ```
@@ -153,7 +152,7 @@ To install the latest latest npm version:
 1. ### Fetching and Resetting Data
 The database will be empty to start. Press the "Grab/Reset Data" button to fetch data from API.
 <br/>
-<img src="images/resetdata.png" alt="Logo" width="500">
+<img src="images/resetdata.png" alt="Logo" width="600">
 <br/>
 On top of initially fetching data. This feature also resets the database by wiping all data and fetching from API again.
 <br/>
@@ -164,9 +163,9 @@ This allows for more testing with the database by resetting it to a default stat
 2. ### Viewing All Brewery Details
 Click on the "More Details" button to navigate to specific brewery to view the full details. 
 <br/>
-<img src="images/moredetailsbutton.png" alt="Logo" width="300">
+<img src="images/moredetailsbutton.png" alt="Logo" width="400">
 <br/>
-<img src="images/moredetails.png" alt="Logo" width="500">
+<img src="images/moredetails.png" alt="Logo" width="600">
 <br/>
 
 3. ### Creating a Brewery
@@ -176,7 +175,7 @@ Click on Add Brewery in the header to navigate to the add brewery page.
 <br/>
 Fill out the form and press "SUBMIT" to add a brewery to the database
 <br/>
-<img src="images/addbrewery.png" alt="Logo" width="500">
+<img src="images/addbrewery.png" alt="Logo" width="600">
 <br/>
 <br/>
 <img src="images/addsuccess.png" alt="Logo" width="300">
@@ -185,7 +184,7 @@ Fill out the form and press "SUBMIT" to add a brewery to the database
 4. ### Editing a Brewery
 Clicking the "EDIT" button on specific brewery from the More Details page or directly from the list will redirect to the Edit Brewery page.
 <br/>
-<img src="images/editbrewery.png" alt="Logo" width="500">
+<img src="images/editbrewery.png" alt="Logo" width="600">
 <br/>
 Fill out the form and press "SUBMIT" to update the brewery to the database
 <br/>
@@ -193,7 +192,7 @@ Fill out the form and press "SUBMIT" to update the brewery to the database
 5. ### Deleting a Brewery
 Clicking the "DELETE" button on specific brewery from the More Details page or directly from the list will redirect to confirm the deletion of that brewery.
 <br/>
-<img src="images/confirmdelete.png" alt="Logo" width="500">
+<img src="images/confirmdelete.png" alt="Logo" width="600">
 <br/>
 Clicking "Yes" will confirm the deletion and "No" will direct back to the list.
 <br/>
@@ -201,7 +200,7 @@ Clicking "Yes" will confirm the deletion and "No" will direct back to the list.
 6. ### Searching the List
 Typing in the search box will filter the list and match with breweries's brewery id, name, type, street, city, state, postal code, phone number and website.
 <br/>
-<img src="images/search.png" alt="Logo" width="500">
+<img src="images/search.png" alt="Logo" width="600">
 <br/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
