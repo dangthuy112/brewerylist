@@ -130,7 +130,55 @@ class BreweryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $brewery = Brewery::where('id', $id)->first();
+
+        if (!$request->brewery_id) {
+            return response(
+                [
+                    'error' => true, 'error-msg' => 'ID parameter required.'
+                ],
+                400
+            );
+        }
+
+        $result = Brewery::where('brewery_id', $request->brewery_id)
+            ->where('id', '!=', $id)->first();
+
+        if ($result) {
+            return response(
+                [
+                    'error' => true, 'error-msg' => 'Brewery_id already exists.'
+                ],
+                403
+            );
+        }
+
+        if ($brewery) {
+            $brewery->brewery_id = $request->brewery_id;
+            //only set data if the field isn't assigned to null
+            //fields that aren't set will be defaulted to NULL in database
+            if (!($request->name == 'null')) $brewery->name = $request->name;
+            if (!($request->brewery_type == 'null')) $brewery->brewery_type = $request->brewery_type;
+            if (!($request->street == 'null')) $brewery->street = $request->street;
+            if (!($request->address_2 == 'null')) $brewery->address_2 = $request->address_2;
+            if (!($request->address_3 == 'null')) $brewery->address_3 = $request->address_3;
+            if (!($request->city == 'null')) $brewery->city = $request->city;
+            if (!($request->state == 'null')) $brewery->state = $request->state;
+            if (!($request->county_province == 'null')) $brewery->county_province = $request->county_province;
+            if (!($request->postal_code == 'null')) $brewery->postal_code = $request->postal_code;
+            if (!($request->country == 'null')) $brewery->country = $request->country;
+            if (!($request->longitude == 'null')) $brewery->longitude = $request->longitude;
+            if (!($request->latitude == 'null')) $brewery->latitude = $request->latitude;
+            if (!($request->phone == 'null')) $brewery->phone = $request->phone;
+            if (!($request->website_url == 'null')) $brewery->website_url = $request->website_url;
+            $brewery->save();
+            return response()->json([
+                'message' => 'Brewery updated successfully.',
+                'code' => 200,
+            ]);
+        } else {
+            return response(['error' => true, 'error-msg' => 'ID does not exist.'], 400);
+        }
     }
 
     /**

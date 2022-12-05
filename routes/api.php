@@ -25,5 +25,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/breweries', [BreweryController::class, 'index']);
 Route::get('/breweries/{id}', [BreweryController::class, 'show']);
 Route::delete('/delete_brewery/{id}', [BreweryController::class, 'destroy']);
+Route::post('/edit_brewery/{id}', [BreweryController::class, 'update']);
 Route::post('/add_brewery', [BreweryController::class, 'store']);
 Route::post('/reset_data', [BreweryController::class, 'resetData']);
