@@ -212,6 +212,7 @@ Typing in the search box will filter the list and match with breweries's brewery
 ## Contact
 
 Dang Thuy Vo - dangthuy112@gmail.com
+<br/>
 Project Link: [https://github.com/dangthuy112/brewerylist](https://github.com/dangthuy112/brewerylist)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
