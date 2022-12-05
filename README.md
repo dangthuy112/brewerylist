@@ -113,9 +113,13 @@ To install the latest latest npm version:
    ```sh
    git clone https://github.com/dangthuy112/brewerylist
    ```
-2. Install NPM packages
+2. In terminal, install NPM packages:
    ```sh
    npm install
+   ```
+3. In terminal, use composer to install php project files:
+   ```sh
+    composer update
    ```
 
 
@@ -132,24 +136,20 @@ To install the latest latest npm version:
 <!-- 4. Go to .env file. Set DB_DATABASE to laravelbreweries
    ```sh
     DB_DATABASE=laravelbreweries -->
-4. In terminal, use composer to install php project files:
-   ```sh
-    composer update
-   ```
-5. In terminal, navigate to directory of brewerylist and migrate tables:
+4. In terminal, navigate to directory of brewerylist and migrate tables:
    ```sh
     php artisan migrate:fresh
    ```
-6. In terminal, start the vite development mode:
+5. In terminal, start the vite development mode:
    ```sh
     npm run dev
    ```
-7. Open a NEW terminal and start the php server and:
+6. Open a NEW terminal and start the php server and:
    ```sh
     php artisan serve
    ```
    Note*: both vite development mode and php server has to be running at the same time
-8. Navigate to http://127.0.0.1:8000/ in browser for the website
+7. Navigate to http://127.0.0.1:8000/ in browser for the website
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
