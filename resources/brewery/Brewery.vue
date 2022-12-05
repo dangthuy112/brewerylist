@@ -9,7 +9,7 @@
                     <router-link class="edit-button btn btn-primary"
                         :to="{ name: 'edit_brewery', params: { id: brewery.id } }">EDIT</router-link>
                     <router-link class="edit-button btn btn-danger"
-                        :to="{ name: 'delete_confirm', params: { id } }">DELETE</router-link>
+                        :to="{ name: 'delete_confirm', params: { id: brewery.id } }">DELETE</router-link>
                 </div>
             </div>
             <div v-if="loading">Data is loading ...</div>
