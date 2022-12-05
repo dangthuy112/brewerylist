@@ -23,6 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Route::get('breweries/{id}', [BreweryController::class, 'show']);
 
 Route::get('/breweries', [BreweryController::class, 'index']);
+Route::get('/breweries/search/{searchString}', [BreweryController::class, 'search']);
 Route::get('/breweries/{id}', [BreweryController::class, 'show']);
 Route::delete('/delete_brewery/{id}', [BreweryController::class, 'destroy']);
 Route::post('/edit_brewery/{id}', [BreweryController::class, 'update']);

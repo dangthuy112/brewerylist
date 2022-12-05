@@ -201,4 +201,17 @@ class BreweryController extends Controller
             return response(['error' => true, 'error-msg' => 'Brewery ID does not exist.'], 400);
         }
     }
+
+    public function search($searchString)
+    {
+        $data = Brewery::where('brewery_id', 'LIKE', "%{$searchString}%")
+            ->orWhere('name', 'LIKE', "%{$searchString}%")
+            ->orWhere('brewery_type', 'LIKE', "%{$searchString}%")
+            ->orWhere('city', 'LIKE', "%{$searchString}%")
+            ->orWhere('state', 'LIKE', "%{$searchString}%")
+            ->orWhere('postal_code', 'LIKE', "%{$searchString}%")
+            ->get();
+
+        return (compact('data'));
+    }
 }

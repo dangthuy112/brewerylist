@@ -9,18 +9,20 @@
                     <div class="col-sm-5 h5">
                         <span class="fw-bold">Brewery ID: </span> {{ (brewery_id) }}
                         <br />
-                        <span class="fw-bold">Street: </span> {{ (street) }}
+                        <span class="fw-bold">Brewery Type: </span> {{ (brewery_type ? brewery_type : 'N/A') }}
                         <br />
-                        <span class="fw-bold">Brewery Type: </span> {{ (brewery_type) }}
+                        <span class="fw-bold">Phone Number: </span> {{ (phone ? formatPhoneNumber(phone) : 'N/A') }}
+                        <br />
+                        <span class="fw-bold">Website URL: </span> {{ (website_url ? website_url : 'N/A') }}
                     </div>
                     <div class="col-sm-5 h5">
-                        <p>
-                            <span class="fw-bold">City: </span> {{ (city) }}
-                            <br />
-                            <span class="fw-bold">State: </span> {{ (state) }}
-                            <br />
-                            <span class="fw-bold">Postal Code: </span> {{ (postal_code) }}
-                        </p>
+                        <span class="fw-bold">Street: </span> {{ (street ? street : 'N/A') }}
+                        <br />
+                        <span class="fw-bold">City: </span> {{ (city ? city : 'N/A') }}
+                        <br />
+                        <span class="fw-bold">State: </span> {{ (state ? state : 'N/A') }}
+                        <br />
+                        <span class="fw-bold">Postal Code: </span> {{ (postal_code ? postal_code : 'N/A') }}
                     </div>
                     <div class="col-sm-2 btn-group-vertical" role="group">
                         <router-link class="edit-button btn btn-primary"
@@ -49,6 +51,18 @@ export default {
         city: String,
         state: String,
         postal_code: String,
+        phone: String,
+        website_url: String
+    },
+    methods: {
+        formatPhoneNumber(phoneNumberString) {
+            var cleaned = ('' + phoneNumberString).replace(/\D/g, '');
+            var match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+            if (match) {
+                return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+            }
+            return null;
+        }
     }
 }
 </script>
